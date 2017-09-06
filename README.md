@@ -1,5 +1,9 @@
 # contactBookApp
 
+This contactBookApp allows the endUsers/Customers to store/manage their Contacts.
+
+Please see the complete problem statement in the Design Document.
+
 The following are the steps needed for executing the project.
 
 The following are the dependencies for executing this project
