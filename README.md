@@ -3,7 +3,7 @@
 The following are the steps needed for executing the project.
 
 The following are the dependencies for executing this project
-Java7/Java8, Maven3, MongoDB
+Java7/Java8, Maven3, MongoDB 3.0.5
 
 The following are the contents of this Repo
 
