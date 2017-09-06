@@ -1,0 +1,321 @@
+{
+	"variables": [],
+	"info": {
+		"name": "contactBookApp",
+		"_postman_id": "32a90ae1-3a7a-3f9d-5cb4-2a7454084fe8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New Contact",
+			"request": {
+				"url": "localhost:8080/chakri/contact",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46c2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"contactName\" : \"divya\",\n\t\"contactEmail\" : \"divya@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Contacts",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/contacts?page=0&size=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46c2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"contactName\" : \"divya\",\n\t\"contactEmail\" : \"divya@gmail.com\"\n}"
+				},
+				"description": "Used by admin to fetch all the contacts managed by contact book app"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Contacts by Owner",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/chakri/contacts?page=0&size=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chakri",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46c2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"contactName\" : \"divya\",\n\t\"contactEmail\" : \"divya@gmail.com\"\n}"
+				},
+				"description": "Used by admin to fetch all the contacts  of a particular owner"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact By Id",
+			"request": {
+				"url": "localhost:8080/chakri/contact/59b00e3d5c6b0030ed39fcf4",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46c2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"contactName\" : \"divya\",\n\t\"contactEmail\" : \"divya@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Search Contacts",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/chakri/contacts/search?query=divya&page=0&size=20",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chakri",
+						"contacts",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "divya",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "20",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46c2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"contactName\" : \"divya\",\n\t\"contactEmail\" : \"divya@gmail.com\"\n}"
+				},
+				"description": "Search for Contacts Based on Contact Name or Contact EmailId"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact ",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/chakri/contact?query=divya",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chakri",
+						"contact"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "divya",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46c2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delete Contact Based on Contact Name or Contact Email"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Contact",
+			"request": {
+				"url": "localhost:8080/chakri/contact/59b0111d5c6b0030ed39fcf6",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46c2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"contactName\" : \"dhanya\",\n\t\"contactEmail\" : \"divya@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
